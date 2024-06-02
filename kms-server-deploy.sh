@@ -167,7 +167,7 @@ start_install() {
 	echo -e "${Tip}${Red_font_prefix} 检查完毕,开始安装vlmcsd服务端...${Font_color_suffix}"
 	echo -e "${Info} 依赖安装/检查中..."
 	install_depend
-	git clone https://github.com/Wind4/vlmcsd.git
+	git clone https://mirror.ghproxy.com/github.com/Wind4/vlmcsd.git
 	[ -d vlmcsd ] && cd vlmcsd || echo -e "${Error} Failed to git clone vlmcsd."
 	make
 	if [ $? -ne 0 ]; then
